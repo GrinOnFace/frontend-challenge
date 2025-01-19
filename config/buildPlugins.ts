@@ -12,9 +12,9 @@ export function buildPlugins(options: buildOptions) : Configuration['plugins'] {
 
     const plugins: Configuration['plugins'] = [
         new HtmlWebpackPlugin({
-			template: options.paths.html, 
-			publicPath: '/frontend-challenge/',
-		}),
+            template: options.paths.html,
+            publicPath: '/',
+        }),
     ]
 
     if (isDev) {
