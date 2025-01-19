@@ -1,1 +1,1 @@
-export {LikesLazy as Likes} from "./Likes.lazy"
+export { LikesLazy as Likes } from './Likes.lazy';
