@@ -1,0 +1,30 @@
+.catItem {
+    position: relative;
+	width: 225px;
+	height: 225px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+	display: block;
+	margin: 0 auto;
+
+    &:hover {
+        transform: scale(1.05);
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+
+        .image {
+            filter: brightness(1.1);
+        }
+
+        .likeButton {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
