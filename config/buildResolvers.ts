@@ -1,4 +1,4 @@
-import { Configuration } from "mini-css-extract-plugin";
+import { Configuration } from "webpack";
 import { buildOptions } from "./types/types";
 
 export function buildResolvers(options: buildOptions) : Configuration['resolve'] {

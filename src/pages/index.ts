@@ -1,1 +1,1 @@
-export {SectionLazy as Section} from "./Likes.lazy"
+export {LikesLazy as Likes} from "./Likes.lazy"

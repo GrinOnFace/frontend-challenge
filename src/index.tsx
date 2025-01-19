@@ -22,7 +22,9 @@ const router = createBrowserRouter([
 		path: "/likes",
         element: <Suspense fallback="Загрузка..."><Likes /></Suspense>,
 	}
-]);
+], {
+    basename: '/frontend-challenge/'
+});
 
 // export const Context = createContext({
 //     store,
