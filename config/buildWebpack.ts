@@ -1,6 +1,4 @@
 import webpack from 'webpack';
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
-
 import { buildDevServer } from './buildDevServer';
 import { buildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
