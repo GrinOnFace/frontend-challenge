@@ -3,6 +3,7 @@ import {App} from "./App";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {createContext, Suspense} from "react";
 import "./App.scss"
+import Likes from "./pages/Likes";
 
 const root = document.getElementById('root')
 
@@ -17,7 +18,13 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
     },
-]);
+	{
+		path: "/likes",
+        element: <Suspense fallback="Загрузка..."><Likes /></Suspense>,
+	}
+], {
+    basename: '/frontend-challenge/'
+});
 
 // export const Context = createContext({
 //     store,

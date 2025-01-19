@@ -11,7 +11,10 @@ export function buildPlugins(options: buildOptions) : Configuration['plugins'] {
     const isDev = options.mode === "development";
 
     const plugins: Configuration['plugins'] = [
-        new HtmlWebpackPlugin({template: options.paths.html, publicPath: '/'}),
+        new HtmlWebpackPlugin({
+			template: options.paths.html, 
+			publicPath: '/frontend-challenge/',
+		}),
     ]
 
     if (isDev) {
