@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcats_pinterest=self.webpackChunkcats_pinterest||[]).push([[577],{577:(e,s,t)=>{t.r(s),t.d(s,{default:()=>c});var n=t(848);const c=function(){return(0,n.jsx)("div",{children:"Likes Page"})}}}]);
