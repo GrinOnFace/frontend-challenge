@@ -13,7 +13,7 @@ export function buildPlugins(options: buildOptions): Configuration['plugins'] {
     const plugins: Configuration['plugins'] = [
         new HtmlWebpackPlugin({
             template: options.paths.html,
-            publicPath: isDev ? '/' : '/frontend-challenge',
+            publicPath: isDev ? '/' : '/frontend-challenge/',
         }),
     ];
 
@@ -31,7 +31,12 @@ export function buildPlugins(options: buildOptions): Configuration['plugins'] {
         );
     }
 
-    plugins.push(new Dotenv());
+    plugins.push(
+        new Dotenv({
+            path: './.env',
+            safe: true,
+        }),
+    );
 
     return plugins;
 }
