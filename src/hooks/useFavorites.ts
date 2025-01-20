@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, FC } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { CatImage } from '@/types/types';
 
 const FAVORITES_KEY = 'favoriteCats';
@@ -17,7 +17,7 @@ export const useFavorites = (): UseFavoritesReturn => {
 
     useEffect(() => {
         localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
-    }, [favorites]);
+    }, [favorites]); //можно убрать и делать на уровне тоггл
 
     const isLiked = useCallback(
         (id: string) => {

@@ -9,7 +9,11 @@ export interface LikeButtonProps {
     className?: string;
 }
 
-export const LikeButton: FC<LikeButtonProps> = ({ isLiked, onClick, className }) => {
+export const LikeButton: FC<LikeButtonProps> = ({ 
+	isLiked, 
+	onClick, 
+	className 
+}) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -21,7 +25,6 @@ export const LikeButton: FC<LikeButtonProps> = ({ isLiked, onClick, className })
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            aria-label='like'
             data-like={isLiked}
         >
             {isLiked || isHovered ? (

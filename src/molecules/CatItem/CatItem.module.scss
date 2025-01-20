@@ -1,7 +1,7 @@
 .catItem {
     position: relative;
-    width: 225px;
-    height: 225px;
+    width: var(--card-size);
+    height: var(--card-size);
     transition: all 0.3s linear;
     cursor: pointer;
     display: block;
@@ -9,7 +9,7 @@
 
     &:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+		box-shadow: var(--shadow-lg);
 
         .image {
             filter: brightness(1.1);

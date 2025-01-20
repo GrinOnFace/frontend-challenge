@@ -19,9 +19,7 @@ const router = createBrowserRouter(
         {
             path: '/',
             element: (
-                <Suspense
-                    fallback={<Loader color='primary' size={50} thickness={3} />}
-                >
+                <Suspense fallback={<Loader color='primary' size={50} thickness={3} />}>
                     <AllCats />
                 </Suspense>
             ),
@@ -29,16 +27,14 @@ const router = createBrowserRouter(
         {
             path: '/likes',
             element: (
-                <Suspense
-                    fallback={<Loader color='primary' size={50} thickness={3} />}
-                >
+                <Suspense fallback={<Loader color='primary' size={50} thickness={3} />}>
                     <Likes />
                 </Suspense>
             ),
         },
     ],
     {
-        basename: '/frontend-challenge/'
+        //basename: '/frontend-challenge/'
     },
 );
 

@@ -2,17 +2,17 @@ import { AxiosResponse } from 'axios';
 import { axiosInstance } from './axiosInstance';
 import { CatImage } from '@/types/types';
 import { CatListParams } from './types';
-import { constantsCatAPI } from '@/constants/constants';
+import { CONSTANTSAPICAT } from '@/constants/constants';
 
 const DEFAULT_PARAMS: CatListParams = {
-    limit: constantsCatAPI.limit,
-    page: constantsCatAPI.page,
-	order: constantsCatAPI.order,
+    page: CONSTANTSAPICAT.page,
+    limit: CONSTANTSAPICAT.limit,
+    order: CONSTANTSAPICAT.order,
 };
 
 export const catApi = {
     async getCatList({
-        page,
+        page = DEFAULT_PARAMS.page,
         limit = DEFAULT_PARAMS.limit,
         order = DEFAULT_PARAMS.order,
     }: CatListParams): Promise<CatImage[]> {

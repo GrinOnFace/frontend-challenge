@@ -3,22 +3,19 @@ import { Loader } from '@/atoms/Loader/Loader';
 import { catApi } from '@/api/catAPI';
 import { CatImage } from '@/types/types';
 import { CatGrid } from '@/organisms/CatGrid/CatGrid';
-import { Header } from '@/organisms/Header/Header';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
-import { constantsCatAPI } from '@/constants/constants';
-import { ErrorMessage } from '@/atoms/ErrorMessage/ErrorMessage';
+import { CONSTANTSAPICAT } from '@/constants/constants';
+import { BaseTemplate } from '@/templates/BaseTemplate/BaseTemplate';
 
 const AllCats: FC = () => {
     const [cats, setCats] = useState<CatImage[]>([]);
-    const [page, setPage] = useState(constantsCatAPI.page);
+    const [page, setPage] = useState(CONSTANTSAPICAT.page);
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState<Error | null>(null);
 
     const loadMore = useCallback(() => {
         if (isLoading) return;
 
         setIsLoading(true);
-        setError(null);
 
         catApi
             .getCatList({
@@ -29,7 +26,7 @@ const AllCats: FC = () => {
                 setPage((prev) => prev + 1);
             })
             .catch((err) => {
-                setError(err instanceof Error ? err : new Error('Ошибка загрузки котиков'));
+                console.error(err);
             })
             .finally(() => {
                 setIsLoading(false);
@@ -39,13 +36,13 @@ const AllCats: FC = () => {
     useEffect(() => {
         catApi
             .getCatList({
-                page: constantsCatAPI.page,
+                page: CONSTANTSAPICAT.page,
             })
             .then((initialCats) => {
                 setCats(initialCats);
             })
             .catch((err) => {
-                setError(err instanceof Error ? err : new Error('Failed to fetch cats'));
+                console.error(err);
             });
     }, []);
 
@@ -54,20 +51,11 @@ const AllCats: FC = () => {
         isLoading,
     });
 
-    if (error)
-        return (
-            <>
-                <Header />
-                <ErrorMessage message={error?.message} />
-            </>
-        );
-
     return (
-        <>
-            <Header />
-            <CatGrid cats={cats} />
+        <BaseTemplate>
+            <CatGrid cats={cats} status={true} />
             {isLoading && <Loader />}
-        </>
+        </BaseTemplate>
     );
 };
 
