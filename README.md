@@ -93,14 +93,14 @@ npm run deploy
 
 ```
 src 
-├── api/ # API клиенты и типы
-├── atoms/ # Атомарные компоненты
-├── molecules/ # Молекулярные компоненты
-├── organisms/ # Организмы
-├── templates/ # Шаблоны страниц
-├── pages/ # Страницы
-├── hooks/ # Кастомные хуки
-├── constants/ # Константы
-├── types/ # TypeScript типы
+├── api/ 		# API клиенты и типы
+├── atoms/ 		# Атомарные компоненты
+├── molecules/  # Молекулярные компоненты
+├── organisms/  # Организмы
+├── templates/  # Шаблоны страниц
+├── pages/ 		# Страницы
+├── hooks/ 		# Кастомные хуки
+├── constants/ 	# Константы
+└── types/ 		# TypeScript типы
 ```
 
