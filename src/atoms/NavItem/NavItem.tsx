@@ -7,7 +7,10 @@ export interface NavItemProps {
     children: React.ReactNode;
 }
 
-export const NavItem: FC<NavItemProps> = ({ to, children }) => {
+export const NavItem: FC<NavItemProps> = ({ 
+	to, 
+	children 
+}) => {
     return (
         <NavLink
             to={to}

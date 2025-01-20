@@ -1,7 +1,7 @@
 .link {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    font-size: 16px;
+    font-size: var(--font-size-md);
     transition: color 0.3s ease;
     line-height: 21px;
     font-weight: 400;
@@ -9,10 +9,11 @@
 
     &:hover {
         color: white;
+		text-decoration: none;
     }
 
     &.active {
         color: white;
-        background-color: #1e88e5;
+        background-color: var(--color-primary);
     }
 }

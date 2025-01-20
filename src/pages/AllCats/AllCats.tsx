@@ -4,12 +4,12 @@ import { catApi } from '@/api/catAPI';
 import { CatImage } from '@/types/types';
 import { CatGrid } from '@/organisms/CatGrid/CatGrid';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
-import { constantsCatAPI } from '@/constants/constants';
+import { CONSTANTSAPICAT } from '@/constants/constants';
 import { BaseTemplate } from '@/templates/BaseTemplate/BaseTemplate';
 
 const AllCats: FC = () => {
     const [cats, setCats] = useState<CatImage[]>([]);
-    const [page, setPage] = useState(constantsCatAPI.page);
+    const [page, setPage] = useState(CONSTANTSAPICAT.page);
     const [isLoading, setIsLoading] = useState(false);
 
     const loadMore = useCallback(() => {
@@ -36,7 +36,7 @@ const AllCats: FC = () => {
     useEffect(() => {
         catApi
             .getCatList({
-                page: constantsCatAPI.page,
+                page: CONSTANTSAPICAT.page,
             })
             .then((initialCats) => {
                 setCats(initialCats);
@@ -53,7 +53,7 @@ const AllCats: FC = () => {
 
     return (
         <BaseTemplate>
-            <CatGrid cats={cats} />
+            <CatGrid cats={cats} status={true} />
             {isLoading && <Loader />}
         </BaseTemplate>
     );

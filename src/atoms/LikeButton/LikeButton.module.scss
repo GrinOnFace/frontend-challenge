@@ -1,8 +1,8 @@
 .likeButton {
     background-color: transparent;
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: var(--spacing-md);
+    bottom: var(--spacing-md);
     border: none;
     width: 45px;
     height: 45px;
@@ -12,11 +12,12 @@
     .icon {
         width: 40px;
         height: 40px;
-        color: #ff4444;
+        color: var(--color-like);
+		
         &:active,
         &:hover {
-            fill: #ff4444;
-            stroke: #ff4444;
+            fill: var(--color-like);
+            stroke: var(--color-like);
         }
     }
 

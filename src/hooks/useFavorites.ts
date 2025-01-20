@@ -17,7 +17,7 @@ export const useFavorites = (): UseFavoritesReturn => {
 
     useEffect(() => {
         localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
-    }, [favorites]);
+    }, [favorites]); //можно убрать и делать на уровне тоггл
 
     const isLiked = useCallback(
         (id: string) => {

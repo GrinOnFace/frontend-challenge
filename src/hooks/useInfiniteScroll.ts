@@ -1,3 +1,4 @@
+import { CLIENTHEIGHTOFFSET } from '@/constants/constants';
 import { useEffect } from 'react';
 
 interface UseInfiniteScrollProps {
@@ -12,7 +13,7 @@ export const useInfiniteScroll = ({ callback, isLoading }: UseInfiniteScrollProp
             const scrollTop = document.documentElement.scrollTop;
             const clientHeight = document.documentElement.clientHeight;
 
-            if (!isLoading && scrollHeight - scrollTop <= clientHeight + 100) {
+            if (!isLoading && scrollHeight - scrollTop <= clientHeight + CLIENTHEIGHTOFFSET) {
                 callback();
             }
         };

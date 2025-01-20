@@ -9,7 +9,11 @@ export interface CatItemProps {
     onLike: (cat: CatImage) => void;
 }
 
-export const CatItem: FC<CatItemProps> = ({ cat, isLiked, onLike }) => {
+export const CatItem: FC<CatItemProps> = ({ 
+	cat, 
+	isLiked, 
+	onLike 
+}) => {
     const handleLike = () => {
         onLike(cat);
     };
