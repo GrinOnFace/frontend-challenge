@@ -14,6 +14,7 @@ export function buildPlugins(options: buildOptions): Configuration['plugins'] {
         new HtmlWebpackPlugin({
             template: options.paths.html,
             publicPath: isDev ? '/' : '/frontend-challenge/',
+            basename: '/frontend-challenge/',
         }),
     ];
 
