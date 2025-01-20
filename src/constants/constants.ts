@@ -1,5 +1,5 @@
 export const constantsCatAPI = {
-	order: 'ASC',
-	limit: 10,
-	page: 0,
+    order: 'ASC',
+    limit: 16,
+    page: 0,
 };

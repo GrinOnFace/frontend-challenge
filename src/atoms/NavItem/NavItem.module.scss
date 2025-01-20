@@ -1,0 +1,18 @@
+.link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    line-height: 21px;
+    font-weight: 400;
+    padding: 20px 18px;
+
+    &:hover {
+        color: white;
+    }
+
+    &.active {
+        color: white;
+        background-color: #1e88e5;
+    }
+}

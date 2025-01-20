@@ -15,7 +15,7 @@ export function buildWebpack(options: buildOptions): webpack.Configuration {
             path: options.paths.output,
             filename: '[name].[contenthash].js',
             clean: true,
-            publicPath: isDev ? '/' : '/frontend-challenge',
+            publicPath: isDev ? '/' : '/frontend-challenge/',
         },
         plugins: buildPlugins(options),
         module: {

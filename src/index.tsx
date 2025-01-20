@@ -18,34 +18,28 @@ const router = createBrowserRouter(
     [
         {
             path: '/',
-            element: ( 
-				<Suspense fallback={<Loader color='primary' size={50} thickness={3} fullscreen={true}/>}>
-                    <AllCats/>
+            element: (
+                <Suspense
+                    fallback={<Loader color='primary' size={50} thickness={3} />}
+                >
+                    <AllCats />
                 </Suspense>
-			),
+            ),
         },
         {
             path: '/likes',
             element: (
-                <Suspense fallback={<Loader color='primary' size={50} thickness={3} fullscreen={true}/>}>
-                    <Likes/>
+                <Suspense
+                    fallback={<Loader color='primary' size={50} thickness={3} />}
+                >
+                    <Likes />
                 </Suspense>
             ),
         },
     ],
     {
-        //basename: '/frontend-challenge'
+        basename: '/frontend-challenge/'
     },
 );
-
-// export const Context = createContext({
-//     store,
-// })
-
-// container.render(
-//   <Context.Provider value={{store}}>
-//       <RouterProvider router={router} />
-//   </Context.Provider>,
-// )
 
 container.render(<RouterProvider router={router} />);
