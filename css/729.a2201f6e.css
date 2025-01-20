@@ -5,3 +5,5 @@
 .Yq2gB_mH{display:flex;max-width:var(--max-width);margin:0 auto}
 .ti_pppXr{background-color:var(--color-primary);box-shadow:var(--shadow-lg);margin-bottom:36px}
 .QIzqS0yJ{min-height:100vh;display:flex;flex-direction:column}.dOFpbbo2{flex:1;max-width:var(--max-width);margin:0 auto;width:100%}
+.Pzc83UQv{width:var(--card-size);height:var(--card-size);background:var(--color-background);border-radius:var(--border-radius-md);overflow:hidden;position:relative}.tDeU6iTR{width:100%;height:100%;background:linear-gradient(90deg, var(--color-skeleton-start) 25%, var(--color-skeleton-middle) 50%, var(--color-skeleton-start) 75%);background-size:200% 100%;animation:TkfF9lwo 1.5s infinite}@keyframes TkfF9lwo{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.qw0BK7d6{display:grid;grid-template-columns:repeat(auto-fill, minmax(var(--card-size), 1fr));gap:var(--spacing-md);width:100%}
