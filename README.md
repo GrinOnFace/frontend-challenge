@@ -25,23 +25,27 @@
 
 1. Клонируйте репозиторий
 
-bash
+```bash
 git clone https://github.com/grinonface/frontend-challenge.git .
+```
 
 2. Установите зависимости
 
-bash
+```bash
 npm install
+```
 
 3. Запустите проект локально
 
-bash
+```bash
 npm run start
+```
 
 4. Создайте .env файл в корне проекта и добавьте в него ключ, который вы можете получить на [сайте](https://thecatapi.com/). Добавьте его следующим образом:	
 
-bash
+```bash
 CAT_API_KEY='your_api_key' (замените на ваш ключ)
+```
 
 5. Откройте браузер и перейдите по адресу http://localhost:3000	
 
@@ -52,25 +56,29 @@ CAT_API_KEY='your_api_key' (замените на ваш ключ)
 
 1. Запуск проверок
 
-bash
+```bash
 npm run lint
+```
 
 2. Исправление ошибок
 
-bash
+```bash
 npm run lint:fix
+```
 
 3. Запуск форматирования
 
-bash
+```bash
 npm run format
+```
 
 ## Сборка проекта
 
 1. Сборка проекта
 
-bash
+```bash
 npm run build
+```
 
 ## Деплой проекта
 
@@ -78,12 +86,12 @@ npm run build
 
 2. Для деплоя проекта необходимо ввести команду:
 
-bash
+```bash
 npm run deploy
-
+```
 ## Структура проекта
 
-src/
+src 
 ├── api/ # API клиенты и типы
 ├── atoms/ # Атомарные компоненты
 ├── molecules/ # Молекулярные компоненты
