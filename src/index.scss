@@ -32,6 +32,10 @@
 
     // Размеры карточек
 	--card-size: 225px;
+
+	// Цвета для скелетона
+    --color-skeleton-start: #f0f0f0;
+    --color-skeleton-middle: #f8f8f8;
 }
 
 * {

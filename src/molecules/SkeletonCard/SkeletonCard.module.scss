@@ -1,0 +1,30 @@
+.skeleton {
+    width: var(--card-size);
+    height: var(--card-size);
+    background: var(--color-background);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--color-skeleton-start) 25%,
+        var(--color-skeleton-middle) 50%,
+        var(--color-skeleton-start) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
