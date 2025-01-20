@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, FC } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { CatImage } from '@/types/types';
 
 const FAVORITES_KEY = 'favoriteCats';
