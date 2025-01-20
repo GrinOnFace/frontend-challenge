@@ -14,10 +14,10 @@ export interface LoaderProps {
     >;
 }
 
-export const Loader: FC<LoaderProps> = ({ 
-	size = CONSTANTSLOADER.size, 
-	thickness = CONSTANTSLOADER.thickness, 
-	color = CONSTANTSLOADER.color 
+export const Loader: FC<LoaderProps> = ({
+    size = CONSTANTSLOADER.size,
+    thickness = CONSTANTSLOADER.thickness,
+    color = CONSTANTSLOADER.color,
 }) => {
     return (
         <div className={classes.loader}>

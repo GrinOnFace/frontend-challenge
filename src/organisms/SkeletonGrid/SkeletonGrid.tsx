@@ -8,9 +8,9 @@ interface SkeletonGridProps {
     className?: string;
 }
 
-export const SkeletonGrid: FC<SkeletonGridProps> = ({ 
+export const SkeletonGrid: FC<SkeletonGridProps> = ({
     count = CONSTANTSAPICAT.limit,
-    className 
+    className,
 }) => {
     return (
         <div className={`${classes.grid} ${className || ''}`}>

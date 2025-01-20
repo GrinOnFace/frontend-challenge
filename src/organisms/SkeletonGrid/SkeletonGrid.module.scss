@@ -3,4 +3,6 @@
     grid-template-columns: repeat(auto-fill, minmax(var(--card-size), 1fr));
     gap: var(--spacing-md);
     width: 100%;
+    max-width: var(--max-width);
+    margin: 15px auto;
 }

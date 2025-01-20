@@ -34,7 +34,7 @@ const router = createBrowserRouter(
         },
     ],
     {
-        //basename: '/frontend-challenge/'
+        //basename: '/frontend-challenge/',
     },
 );
 

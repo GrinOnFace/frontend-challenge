@@ -1,5 +1,4 @@
 import { FC, useState, useCallback, useEffect } from 'react';
-import { Loader } from '@/atoms/Loader/Loader';
 import { catApi } from '@/api/catAPI';
 import { CatImage } from '@/types/types';
 import { CatGrid } from '@/organisms/CatGrid/CatGrid';

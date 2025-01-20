@@ -17,7 +17,7 @@ const Likes: FC = () => {
 
     return (
         <BaseTemplate>
-            <CatGrid cats={favorites} status={false}/>
+            <CatGrid cats={favorites} status={false} />
         </BaseTemplate>
     );
 };

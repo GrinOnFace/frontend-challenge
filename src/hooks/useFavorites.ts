@@ -10,18 +10,18 @@ interface UseFavoritesReturn {
 }
 
 export const useFavorites = (): UseFavoritesReturn => {
-	// Хук для работы с избранным
+    // Хук для работы с избранным
     const [favorites, setFavorites] = useState<CatImage[]>(() => {
         const saved = localStorage.getItem(FAVORITES_KEY);
         return saved ? JSON.parse(saved) : [];
     });
 
-	// Сохранение в localStorage при изменении favorites
+    // Сохранение в localStorage при изменении favorites
     useEffect(() => {
         localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
-    }, [favorites]); 
+    }, [favorites]);
 
-	// Проверка на наличие в избранном
+    // Проверка на наличие в избранном
     const isLiked = useCallback(
         (id: string) => {
             return favorites.some((cat) => cat.id === id);
@@ -29,7 +29,7 @@ export const useFavorites = (): UseFavoritesReturn => {
         [favorites],
     );
 
-	// Добавление/удаление из избранного
+    // Добавление/удаление из избранного
     const toggleFavorite = useCallback((cat: CatImage) => {
         setFavorites((prev) => {
             const isExist = prev.some((item) => item.id === cat.id);

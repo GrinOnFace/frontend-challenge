@@ -9,11 +9,7 @@ export interface LikeButtonProps {
     className?: string;
 }
 
-export const LikeButton: FC<LikeButtonProps> = ({ 
-	isLiked, 
-	onClick, 
-	className 
-}) => {
+export const LikeButton: FC<LikeButtonProps> = ({ isLiked, onClick, className }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
