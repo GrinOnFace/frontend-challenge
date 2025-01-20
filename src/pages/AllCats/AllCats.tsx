@@ -6,6 +6,7 @@ import { CatGrid } from '@/organisms/CatGrid/CatGrid';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { CONSTANTSAPICAT } from '@/constants/constants';
 import { BaseTemplate } from '@/templates/BaseTemplate/BaseTemplate';
+import { SkeletonGrid } from '@/organisms/SkeletonGrid/SkeletonGrid';
 
 const AllCats: FC = () => {
     const [cats, setCats] = useState<CatImage[]>([]);
@@ -54,7 +55,7 @@ const AllCats: FC = () => {
     return (
         <BaseTemplate>
             <CatGrid cats={cats} status={true} />
-            {isLoading && <Loader />}
+            {isLoading && <SkeletonGrid />}
         </BaseTemplate>
     );
 };
